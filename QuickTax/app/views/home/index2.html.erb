@@ -1,9 +1,58 @@
 <div id="centralize">
     <div id="root-container-tax_calculator">
-    <br><br>
-        <p style="font-size: 2vh"> [Philippines 2023 | Tax Calculator]<br></p>
+    
+        <br>
+        <h1 style="text-align: center;"> Philippines 2023 | Tax Calculator<br><br></h1>
         <div id="container-monthly_salary">
-
+            <form>
+                <label for="monthlySalaryInput" style="font-size: 2vh">Monthly Income: </label>
+                <input type="number" id="monthlySalaryInput" name="monthlySalaryInput" value="<%=@monthlyIncome%>" class="inputBoxes-design">
+                <input type="submit" value="Submit" id="monthlySalary-Submit">
+            </form>
         </div>
+
+        <br><br>
+        <h1 style="text-align: center;"> Computation Result <br></h1>
+        <br>
+
+        <div id="container-tax_computation">
+            <form>
+                <p style="font-size: 2vh"> [Tax Computation] <br></p>
+                <label for="incomeTax-output" style="font-size: 2vh">Income Tax: </label>
+                <input type="number" id="incomeTax-output" value="<%=@incomeTax%>" class="inputBoxes-design">
+                <br>
+                <label for="netPayAfterTax-output" style="font-size: 2vh">Net Pay After Tax: </label>
+                <input type="number" id="netPayAfterTax-output" value="<%=@netPayAfterTax%>" class="inputBoxes-design">
+            </form>
+        </div>
+
+        <div id="container-tax_computation">
+            <form>
+                <p style="font-size: 2vh"> [Monthly Contributions] <br></p>
+                <br>
+                <label for="SSS-output" style="font-size: 2vh">SSS: </label>
+                <input type="number" id="SSS-output" value="<%=@SSS%>" class="inputBoxes-design">
+                <br>
+                <label for="philHealth-output" style="font-size: 2vh">PhilHealth: </label>
+                <input type="number" id="philHealth-output" value="<%=@philHealth%>" class="inputBoxes-design">
+                <br>
+                <label for="pagIbig-output" style="font-size: 2vh">Pag-IBIG: </label>
+                <input type="number" id="pagIbig-output" value="<%=@pagIbig%>" class="inputBoxes-design">
+                <br>
+                <label for="totalContributions-output" style="font-size: 2vh">Total-Contributions: </label>
+                <input type="number" id="totalContributions-output" value="<%=@totalContributions%>" class="inputBoxes-design">
+            </form>
+        </div>
+
+        <div id="container-tax_final_computation">
+            <form>
+                <label for="totalDeductions-output" style="font-size: 2vh">Total Deductions: </label>
+                <input type="number" id="totalDeductions-output" value="<%=@totalDeductions%>" class="inputBoxes-design">
+                <br>
+                <label for="netPayAfterDeductions-output" style="font-size: 2vh">Net Pay After Deductions: </label>
+                <input type="number" id="netPayAfterDeductions-output" value="<%=@netPayAfterDeductions%>" class="inputBoxes-design">
+            </form>
+        </div>
+
     </div>  
 </div>
