@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+ }
+
+
+ #centralize {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+
+ #root-container-tax_calculator {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 80vh;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+ }
+
+ #container-monthly_salary {
+    width: 10vh;
+    height: 10vh;
+    background-color: black;
+ }
+ 
+/* 
+ #title-tax_calculator {
+ } */
