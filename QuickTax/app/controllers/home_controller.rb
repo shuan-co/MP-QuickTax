@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
   
   def index2
-    #HELLO
+    #HELLO2
     # MONTHLY INCOME IS MAIN VARIABLE FOR COMPUTATIONS
     @monthlyIncome = params[:monthlySalaryInput].to_i
     
