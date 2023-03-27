@@ -240,7 +240,12 @@ class HomeController < ApplicationController
     return income_tax
   end
 
-  def 
+  def format(unformatted_value)
+    numeric_str = unformatted_value.to_s.gsub(/[^\d\.-]/, '') # remove non-numeric characters
+    numeric_float = numeric_str.to_f
+    return sprintf("₱ %0.2f", numeric_float).gsub(/(\d)(?=(\d\d\d)+(?!\d))/, "\\1,")
+  end
+
   # WEB CONTROLLER FUNCTIONS
 
   def index
@@ -271,10 +276,20 @@ class HomeController < ApplicationController
     @netPayAfterTax = @monthlyIncome - @incomeTax
 
     #[Total Deductions]
-    @totalDeductions = @totalContributions + @incomeTax 
+    @totalDeductions = @totalContributions + @incomeTax
 
     #[NetPayAfterDeductions]
     @netPayAfterDeductions = @monthlyIncome - @totalDeductions
+    
+    # FORMAT TO CURRENCY
+    @SSS = format(@SSS)
+    @philHealth = format(@philHealth)
+    @pagIbig = format(@pagIbig)
+    @totalContributions = format(@totalContributions)
+    @incomeTax = format(@incomeTax)
+    @netPayAfterTax = format(@nextPayAfterTax)
+    @totalDeductions = format(@totalDeductions)
+    @netPayAfterDeductions = format(@netPayAfterDeductions)
 
   end
 end
