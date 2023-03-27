@@ -280,14 +280,13 @@ class HomeController < ApplicationController
 
     #[NetPayAfterDeductions]
     @netPayAfterDeductions = @monthlyIncome - @totalDeductions
-    
-    # FORMAT TO CURRENCY
+        
     @SSS = format(@SSS)
     @philHealth = format(@philHealth)
     @pagIbig = format(@pagIbig)
     @totalContributions = format(@totalContributions)
     @incomeTax = format(@incomeTax)
-    @netPayAfterTax = format(@nextPayAfterTax)
+    @netPayAfterTax = format(@netPayAfterTax)
     @totalDeductions = format(@totalDeductions)
     @netPayAfterDeductions = format(@netPayAfterDeductions)
 
